@@ -1,0 +1,10 @@
+### Create Account
+POST http://localhost:3000/api/signup
+Content-Type: application/json
+
+{
+  "name": "John Woode",
+  "email": "email@example.com",
+  "password": "password2111"
+
+}
