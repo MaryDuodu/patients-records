@@ -1,4 +1,5 @@
 import { connectToDatabase } from "../../lib/mongodb";
+import bcrypt from "bcrypt"
 
 export default async function handler(req, res) {
     const { db } = await connectToDatabase()
@@ -15,7 +16,8 @@ export default async function handler(req, res) {
 
     await db.collection("users").insertOne({
         name: name,
-        username: username, password
+        username: username,
+        password: await bcrypt.hash(password, 10)
     })
     res.status(200).json({ name, email: username, password });
 
