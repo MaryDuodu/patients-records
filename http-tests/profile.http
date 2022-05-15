@@ -1,7 +1,16 @@
-POST http://localhost:3000/api/patients
+POST http://localhost:3000/api/patients/profile
 Content-Type: application/json
 
 
 {
-   " name": "John Doe"
+   "fullName": "John Doe",
+   "birthDate":"12/5/1996",
+   "gender":"female/male",
+   "maritalStatus": "married",
+   "phoneNumber": "0234234534",
+   "email": "email@example.com",
+   "address": "capecoastgh",
+
+
+
 }
